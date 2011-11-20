@@ -2,20 +2,20 @@
 #import("dart:json");
 
 class basicajax {
-  Console _console = null;
-
+  InputElement _search = null;
+  Element _data = null;
+  
   basicajax() {
-    _console = window.console;
+    _search = document.query('.search');
+    _data = document.query('#data');
   }
 
   void run() {
-    InputElement element = document.query('.search');
-    
-    element.on.keyUp.add( _(Event event) {
+    _search.on.keyUp.add( _(Event event) {
       XMLHttpRequest request = new XMLHttpRequest();
-      String url = 'http://localhost/dartexamples/dynamiclist/data.php?q=${element.value}';
+      String url = 'http://localhost/dartexamples/dynamiclist/data.php?q=${_search.value}';
 
-      request.open("GET", url, false);
+      request.open("GET", url, true);
       
       request.on.load.add((event) {
         this.resetData();
@@ -31,14 +31,13 @@ class basicajax {
   }
 
   void resetData() {
-    document.query('#data').nodes.clear();
+    _data.nodes.clear();
   }
   
   void addRow(String message) {
-    Element ul = document.query('#data');
     Element inner = new Element.tag('li');
     inner.innerHTML = message;
-    ul.elements.add(inner);
+    _data.elements.add(inner);
   }
 }
 
