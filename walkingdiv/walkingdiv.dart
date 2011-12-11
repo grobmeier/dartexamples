@@ -36,6 +36,7 @@ class _Field {
       element.classes.add('selected');
     });
   }
+  
   void paintTo(DivElement panel) {
     
     if(x == 0) {
