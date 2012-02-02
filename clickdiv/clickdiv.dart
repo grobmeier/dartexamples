@@ -1,10 +1,8 @@
 #import('dart:html');
 
-class clickdiv {
-  DivElement _clickRegion;
-
-  clickdiv() {
-    _clickRegion = document.query("#clickMe");
+class ClickDiv {
+  ClickDiv() {
+    DivElement _clickRegion = document.query("#clickMe");
     
     _clickRegion.on.click.add((e) {
       if(_clickRegion.style.backgroundColor == "rgb(255, 170, 170)") {
@@ -14,12 +12,8 @@ class clickdiv {
       }
     });
   }
-
-  void run() {
-    
-  }
 }
 
 void main() {
-  new clickdiv().run();
+  new ClickDiv();
 }
