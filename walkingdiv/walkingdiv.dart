@@ -37,7 +37,7 @@ class _Field {
       selected = true;
       element.classes.add('selected');
       
-      _numberOfSelected.innerHTML = document.queryAll('.selected').length;
+      _numberOfSelected.innerHTML = document.queryAll('.selected').length.toString();
     });
   }
   
