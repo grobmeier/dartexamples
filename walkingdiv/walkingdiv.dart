@@ -38,6 +38,13 @@ class _Field {
       element.classes.add('selected');
       
       _numberOfSelected.innerHTML = document.queryAll('.selected').length.toString();
+      
+      List list = document.queryAll('.selected');
+      for(DivElement listElement in list) {
+        print (listElement.innerHTML);
+      }
+      
+      
     });
   }
   
