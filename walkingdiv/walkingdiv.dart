@@ -5,6 +5,8 @@
 // Public, to let others change the size of this field
 int fieldsize = 9;
 
+SpanElement _numberOfSelected;
+
 class _Field {
   _Field top;
   _Field bottom;
@@ -34,6 +36,8 @@ class _Field {
     element.on.click.add((e) {
       selected = true;
       element.classes.add('selected');
+      
+      _numberOfSelected.innerHTML = document.queryAll('.selected').length;
     });
   }
   
@@ -73,11 +77,11 @@ class _Field {
 
 class WalkingDiv {
   DivElement _panel;
+  
   _Field _topLeft;
   _Field _selected;
   
   WalkingDiv() {
-    
     _panel = document.query('#panel');
   }
 
@@ -100,5 +104,6 @@ class WalkingDiv {
 }
 
 void main() {
+  _numberOfSelected = document.query('#numberOfSelected');
   new WalkingDiv().run();
 }
