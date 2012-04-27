@@ -23,7 +23,6 @@ process() {
   port.receive((var message, SendPort replyTo) {
     print ("Process: ${message}");
     replyTo.send("done");
-    throw new Exception();
     port.close();
   });
 }
