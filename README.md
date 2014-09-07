@@ -1,4 +1,8 @@
-LICENSE:
+# Dart Examples
+
+The contents of this repos is outdated and target Dart versions <.8
+
+## LICENSE:
 
 Copyright 2011 Christian Grobmeier
 
@@ -13,10 +17,3 @@ Copyright 2011 Christian Grobmeier
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
-
-
-CONTENT OF THIS REPOSITORY:
-
-Several Examples in Dart.
-
